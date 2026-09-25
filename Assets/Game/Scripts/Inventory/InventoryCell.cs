@@ -40,5 +40,15 @@ namespace CSC2026
         {
             _image.gameObject.SetActive(true);
         }
+
+        public UnitType GetUnit()
+        {
+            return _unit;
+        }
+
+        public void Remove()
+        {
+            GetComponentInParent<Inventory>().RemoveCell(this);
+        }
     }
 }
